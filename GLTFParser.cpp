@@ -1,3 +1,22 @@
+/*****************************************************************
+*                                                                *
+*    Purpose:                                                    *
+*        Simple and efficient parser for GLTF format             *
+*        allows you to import 3d mesh, material and scene        *
+*    Author:                                                     *
+*        Anilcan Gulkaya 2023 anilcangulkaya7@gmail.com          *
+*    Restrictions:                                               *
+*        No extension support.                                   *
+*    License:                                                    *
+*        No License whatsoever do Whatever you want.             *
+*                                                                *
+*****************************************************************/
+
+#ifndef AX_MALLOC
+    #define AX_MALLOC(size) ((void*)new char[size])
+    #define AX_CALLOC(size) ((void*)new char[size]{})
+    #define AX_FREE(ptr)    (delete[] (char*)(ptr) )
+#endif
 
 #ifndef __cplusplus
 extern "C" {
