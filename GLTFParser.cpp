@@ -18,6 +18,8 @@
     #define AX_FREE(ptr)    (delete[] (char*)(ptr) )
 #endif
 
+#include "GLTFParser.h"
+
 #ifndef __cplusplus
 extern "C" {
 #endif
@@ -526,36 +528,39 @@ inline __constexpr int CalculateArrayGrowth(int _size)
     return _size + addition; // growth is sufficient
 }
 
-typedef unsigned long long unsignedll;
-
+#if (defined(__GNUC__) || defined(__clang__)) || \
+    (defined(_MSC_VER) && (AX_CPP_VERSION >= AX_CPP17))
+    #define StringLength(s) (int)__builtin_strlen(s)
+#elif 
+typedef unsigned long long unsignedLongLong;
+// http://www.lrdev.com/lr/c/strlen.c
 inline int StringLength(char const* s)
 {
     char const* p = s;
-    unsignedll m = 0x7efefefefefefeff, n = ~m, i;
+    const unsignedLongLong m = 0x7efefefefefefeffull; 
+    const unsignedLongLong n = ~m;
 
-    for (; (unsignedll)p & (sizeof(unsignedll) - 1); p++) {
-        if (!*p) {
-            return (int)(unsignedll)(p - s);
-        }
-    }
+    for (; (unsignedLongLong)p & (sizeof(unsignedLongLong) - 1); p++) 
+        if (!*p) 
+            return (int)(unsignedLongLong)(p - s);
 
-    for (;;) {
-
-        i = *(unsignedll const*)p;
+    for (;;) 
+    {
+        // memory is aligned from now on
+        unsignedLongLong i = *(const unsignedLongLong*)p;
 
         if (!(((i + m) ^ ~i) & n)) {
-            p += sizeof(unsignedll);
-
-        } else {
-
-            for (i = sizeof(unsignedll); i; p++, i--) {
-                if (!*p) {
-                    return (int)(unsignedll)(p - s);
-                }
-            }
+            p += sizeof(unsignedLongLong);
+        }
+        else
+        {
+            for (i = sizeof(unsignedLongLong); i; p++, i--) 
+            if (!*p) return (int)(unsignedLongLong)(p - s);
         }
     }
 }
+#endif
+
 #endif // ASTL_COMMON
 
 /*****************************************************************
