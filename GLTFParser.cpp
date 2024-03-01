@@ -3560,7 +3560,7 @@ __public int ParseGLTF(const char* path, SceneBundle* result, float scale)
     return 1;
 }
 
-__public void FreeSceneBundleBuffers(SceneBundle* gltf)
+__public void FreeGLTFBuffers(SceneBundle* gltf)
 {
     for (int i = 0; i < gltf->numBuffers; i++)
     {
@@ -3572,7 +3572,7 @@ __public void FreeSceneBundleBuffers(SceneBundle* gltf)
     gltf->buffers = nullptr;
 }
 
-__public void FreeSceneBundle(SceneBundle* gltf)
+__public void FreeGLTF(SceneBundle* gltf)
 {
     struct CharFragment { 
         CharFragment* next; char* ptr; int64_t   size;
