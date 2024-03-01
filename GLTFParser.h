@@ -321,7 +321,7 @@ typedef struct ParsedObj_
 extern int ParseGLTF(const char* path, SceneBundle* scene, float scale);
 // Free
 extern void FreeParsedGLTF(SceneBundle* gltf);
-void FreeSceneBundleBuffers(SceneBundle* gltf);
+void FreeGLTFBuffers(SceneBundle* gltf);
 extern const char* ParsedSceneGetError(AErrorType error);
 
 #endif // AX_GLTF_PARSER
