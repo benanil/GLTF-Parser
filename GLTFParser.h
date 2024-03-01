@@ -298,24 +298,6 @@ typedef struct SceneBundle_
     ASkin      *skins;
 } SceneBundle;
 
-typedef struct ParsedObj_
-{
-    short numMeshes;
-    short numMaterials;
-    short numImages;
-    
-    AErrorType error;
-
-    void* allVertices;
-    void* allIndices;
-
-    char* materialText; // we hold material names in this.
-
-    AMesh*     meshes;
-    AMaterial* materials;
-    AImage*    images;
-} ParsedObj;
-
 // if there is an error error will be minus GLTFErrorType
 // out scene should not be null
 extern int ParseGLTF(const char* path, SceneBundle* scene, float scale);
