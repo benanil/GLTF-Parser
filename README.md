@@ -17,3 +17,11 @@ int main()
     // use scene....
 }
 ```
+for custom allocators define this macros before including GLTFParser.h 
+```c
+#ifndef AX_MALLOC
+    #define AX_MALLOC(size) (malloc(size))
+    #define AX_CALLOC(size) (calloc(size, 1))
+    #define AX_FREE(ptr)    (free(ptr))
+#endif
+```
