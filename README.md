@@ -34,10 +34,9 @@ Library has been used by my engine:
 [Template Sane Program](https://github.com/benanil/TemplateSaneProgram)
 
 # Contributing
-
 feel free to contribute
 
-#Contact
+# Contact
 If you have any questions, feedback, or suggestions, feel free to reach out:<br>
 
 Email: anilcangulkaya7@gmail.com<br>
