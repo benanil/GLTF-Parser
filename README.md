@@ -29,5 +29,6 @@ for custom allocators define this macros before including GLTFParser.h
     #define AX_FREE(ptr)    (free(ptr))
 #endif
 ```
+![animation and scene imported using this lib](https://github.com/benanil/GLTF-Parser/assets/48527900/a23d504e-4d97-44e5-bd69-687765b8138d)<br>
 Library has been used by my engine:
 [Template Sane Program](https://github.com/benanil/TemplateSaneProgram)
