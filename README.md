@@ -32,3 +32,16 @@ for custom allocators define this macros before including GLTFParser.h
 ![animation and scene imported using this lib](https://github.com/benanil/GLTF-Parser/assets/48527900/a23d504e-4d97-44e5-bd69-687765b8138d)<br>
 Library has been used by my engine:
 [Template Sane Program](https://github.com/benanil/TemplateSaneProgram)
+
+# Contributing
+
+feel free to contribute
+
+#Contact
+If you have any questions, feedback, or suggestions, feel free to reach out:<br>
+
+Email: anilcangulkaya7@gmail.com<br>
+Twitter: @anilcanglk12<br>
+GitHub: @benanil<br>
+<br>
+Feel free to reach out regarding any inquiries related to the project.<br>
