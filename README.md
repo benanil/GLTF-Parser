@@ -4,7 +4,8 @@ No external dependency! C runtime is also haven't used in this project except st
 Matrix conversion code may require ARM neon or SSE4.1, but in case these instruction sets are not exist there is scalar versions as well.<br><br>
 Custom string and integer allocators have been used for performance, unlike other json parsers parser doesn't store or hash strings, <br>
 compares the values and stores the required values immediately that's why this is faster than other gltf parsers. <br><br>
-haven't tested mac and ios platform but Android, Windows and gcc, clang msvc compilers works fine.<br>
+haven't tested mac and ios platform but Android, Windows and gcc, clang msvc compilers works fine.<br><br>
+no .glb support yet. only .gltf + .bin + image files
 ```c
 int main()
 {
