@@ -6,7 +6,7 @@
 *    Author:                                                     *
 *        Anilcan Gulkaya 2023 anilcangulkaya7@gmail.com          *
 *    Restrictions:                                               *
-*        No extension support.                                   *
+*        No extension and .glb support.                          *
 *    License:                                                    *
 *        No License whatsoever do Whatever you want.             *
 *                                                                *
