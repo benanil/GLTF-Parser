@@ -15,6 +15,8 @@ int main()
         printf("gltf scene parsing error!: %s", ParsedSceneGetError(sponzaScene.error));
     }
     // use scene....
+    FreeGLTFBuffers(&sponzaScene);
+    FreeGltf(&sponzaScene);
 }
 ```
 for custom allocators define this macros before including GLTFParser.h 
