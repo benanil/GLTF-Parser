@@ -27,3 +27,5 @@ for custom allocators define this macros before including GLTFParser.h
     #define AX_FREE(ptr)    (free(ptr))
 #endif
 ```
+Library has been used by my engine:
+[Template Sane Program](https://github.com/benanil/TemplateSaneProgram)
