@@ -1,11 +1,19 @@
+/*****************************************************************
+*                                                                *
+*    Purpose:                                                    *
+*        Simple and efficient parser for GLTF format             *
+*        allows you to import 3d mesh, material and scene        *
+*    Author:                                                     *
+*        Anilcan Gulkaya 2023 anilcangulkaya7@gmail.com          *
+*    Restrictions:                                               *
+*        No extension support.                                   *
+*    License:                                                    *
+*        No License whatsoever do Whatever you want.             *
+*                                                                *
+*****************************************************************/
+
 #ifndef AX_GLTF_PARSER
 #define AX_GLTF_PARSER
-
-#ifndef AX_MALLOC
-    #define AX_MALLOC(size) (malloc(size))
-    #define AX_CALLOC(size) (calloc(size, 1))
-    #define AX_FREE(ptr)    (free(ptr))
-#endif
 
 enum AAttribType_
 {
@@ -313,6 +321,7 @@ typedef struct ParsedObj_
 extern int ParseGLTF(const char* path, SceneBundle* scene, float scale);
 // Free
 extern void FreeParsedGLTF(SceneBundle* gltf);
+void FreeSceneBundleBuffers(SceneBundle* gltf);
 extern const char* ParsedSceneGetError(AErrorType error);
 
 #endif // AX_GLTF_PARSER
